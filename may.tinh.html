@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input type="text" id="hienlenday"><br>
+<table>
+    <tr>
+        <td><button onclick="something(1)">1</button></td>
+        <td><button onclick="something(2)">2</button></td>
+        <td><button onclick="something(3)">3</button></td>
+        <td><button onclick="something('+')">+</button></td>
+    </tr>
+    <tr>
+        <td><button onclick="something(4)">4</button></td>
+        <td><button onclick="something(5)">5</button></td>
+        <td><button onclick="something(6)">6</button></td>
+        <td><button onclick="something('-')">-</button></td>
+    </tr>
+    <tr>
+        <td><button onclick="something(7)">7</button></td>
+        <td><button onclick="something(8)">8</button></td>
+        <td><button onclick="something(9)">9</button></td>
+        <td><button onclick="something('x')">x</button></td>
+    </tr>
+    <tr>
+        <td><button onclick="xoahet()">C</button></td>
+        <td><button onclick="something(0)">0</button></td>
+        <td><button onclick="tinh()">=</button></td>
+        <td><button onclick="something('/')">/</button></td>
+    </tr>
+</table>
+<script>
+    function something(data) {
+        document.getElementById('hienlenday').value += data
+    }
+
+    function tinh() {
+        document.getElementById('hienlenday').value = eval(document.getElementById('hienlenday').value)
+    }
+
+    function xoahet() {
+        document.getElementById('hienlenday').value = ''
+    }
+</script>
+</body>
+</html>

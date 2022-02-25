@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="câen">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        h1 {
+            position: relative;
+            left: 200px;
+            top: 50px;
+        }
+        #yes {
+            position: relative;
+            left: 250px;
+            top: 50px;
+
+        }
+        #no {
+            position: relative;
+            left: 250px;
+            top: 50px;
+        }
+    </style>
+</head>
+<body>
+<h1>Do you love me?</h1>
+<button type="button" onclick="yes()" id="yes">YES</button>
+<button type="button" onmouseover="no()" id="no">NO</button>
+</body>
+</html>
+<script>
+    function yes() {
+        alert("<3")
+    }
+    function no() {
+        let c = document.getElementById("no");
+        let a = window.innerWidth;
+        let b = window.innerHeight;
+        c.style.left = Math.round(Math.random() * a) + "px";
+        c.style.top = Math.round(Math.random() * b) + "px";
+
+    }
+
+</script>
